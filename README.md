@@ -22,18 +22,3 @@ The **COM 103 Task Tracker** is a Python program designed to help manage and tra
 
 ---
 
-## Badges
-
-The program assigns various badges based on the project’s overall completion and task status. These badges provide visual indicators of project progress and individual task completion.
-
-### Project Progress Badges:
-- **"On Fire!"**: Awarded when the project is 100% complete.
-- **"Steady Worker"**: Awarded when the project is 75%-99% complete.
-- **"Needs Improvement"**: Awarded when the project is below 50% complete.
-
-### Task Completion Badges:
-- **"Task Master"**: Awarded when **all** tasks are completed ("done").
-- **"Halfway There"**: Awarded when **half or more** tasks are marked as "done".
-- **"Getting Started"**: Awarded when fewer than half of the tasks are completed.
-
-
