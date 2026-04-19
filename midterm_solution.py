@@ -36,42 +36,27 @@ assigned_points = []
 # Task entry loop - runs exactly 4 times
 for task_slot in range(4):
     print(f"--- TASK {task_slot + 1} ---")
-    task_number = 0
-    while task_number == 0 or task_number < 0:
-        task_input = input("Task number (0 to skip): ").strip()
-        if task_input:
-            task_number = int(task_input)
-
+    task_number = int(input("Task number (1-5, 0 to skip): ").strip() or "0")
+    
     if task_number == 0:
         print()
         continue
-
-    # Validate task number (1-5)
+    
     if 1 <= task_number <= 5:
-        member_name = ""
-        while not member_name:
-            member_name = input("Member name: ").strip()
+        member_name = input("Member name: ").strip()
+        status = input("Status (done/pending): ").strip().lower()
         
-        status = ""
-        while not status or status.lower() not in ("done", "pending"):
-            status = input("Status (done/pending): ").strip().lower()
-        
-        print()
-
-        # Store assignment
-        assigned_tasks.append(task_number)
-        assigned_members.append(member_name)
-        assigned_statuses.append(status)
-
-        # Calculate points based on status
-        if status == "done":
-            points = 2
+        if status in ("done", "pending"):
+            assigned_tasks.append(task_number)
+            assigned_members.append(member_name)
+            assigned_statuses.append(status)
+            assigned_points.append(2 if status == "done" else 1)
+            print()
         else:
-            points = 1
-
-        assigned_points.append(points)
+            print("Invalid status.")
+            print()
     else:
-        print("Invalid task number - slot skipped.")
+        print("Invalid task number.")
         print()
 
 # Calculate totals
@@ -99,20 +84,14 @@ print("-" * 48)
 # Display each assigned task
 for i in range(len(assigned_tasks)):
     task_idx = assigned_tasks[i] - 1
-    task_name = task_names[task_idx]
-    hours = task_hours[task_idx]
-    member = assigned_members[i]
-    status = assigned_statuses[i]
-    points = assigned_points[i]
-
-    print("[" + str(i + 1) + "] " + task_name + " [" + str(hours) + "h]")
-    print("    Assigned to : " + member)
-    print("    Status      : " + status)
-    print("    Points      : " + str(points) + " / 2")
+    print(f"[{i + 1}] {task_names[task_idx]} [{task_hours[task_idx]}h]")
+    print(f"    Assigned to : {assigned_members[i]}")
+    print(f"    Status      : {assigned_statuses[i]}")
+    print(f"    Points      : {assigned_points[i]} / 2")
     print()
 
 print("-" * 48)
-print("Points Earned   : " + str(total_earned) + " / " + str(total_max))
-print("Progress        : " + str(progress_percent) + "%")
-print("Project Status  : " + project_status)
+print(f"Points Earned   : {total_earned} / {total_max}")
+print(f"Progress        : {progress_percent}%")
+print(f"Project Status  : {project_status}")
 print("=" * 48)
