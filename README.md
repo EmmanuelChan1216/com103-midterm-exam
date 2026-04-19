@@ -1,5 +1,5 @@
 # com103-midterm-exam
-https://img.shields.io/badge/Task_Tracker-blue
+![Python](https://img.shields.io/badge/Task_Tracker-blue)
 
 
 Overview of the Task Tracker Program:
