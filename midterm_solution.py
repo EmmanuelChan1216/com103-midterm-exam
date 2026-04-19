@@ -105,14 +105,14 @@ for i in range(len(assigned_tasks)):
     status = assigned_statuses[i]
     points = assigned_points[i]
 
-    print(f"[{i + 1}] {task_name:<22} [{hours}h]")
-    print(f"    Assigned to : {member}")
-    print(f"    Status      : {status}")
-    print(f"    Points      : {points} / 2")
+    print("[" + str(i + 1) + "] " + task_name + " [" + str(hours) + "h]")
+    print("    Assigned to : " + member)
+    print("    Status      : " + status)
+    print("    Points      : " + str(points) + " / 2")
     print()
 
 print("-" * 48)
-print(f"Points Earned   : {total_earned} / {total_max}")
-print(f"Progress        : {progress_percent}%")
-print(f"Project Status  : {project_status}")
+print("Points Earned   : " + str(total_earned) + " / " + str(total_max))
+print("Progress        : " + str(progress_percent) + "%")
+print("Project Status  : " + project_status)
 print("=" * 48)
