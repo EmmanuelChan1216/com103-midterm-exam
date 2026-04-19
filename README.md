@@ -1,9 +1,10 @@
 # COM 103 Project - Task Tracker
 
-![Build Status](https://img.shields.io/github/workflow/status/your-username/task-tracker/Build)
-![Test Coverage](https://img.shields.io/coveralls/github/your-username/task-tracker)
-![License](https://img.shields.io/github/license/your-username/task-tracker)
-![Version](https://img.shields.io/github/v/release/your-username/task-tracker)
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
+![Status](https://img.shields.io/badge/Status-Completed-green?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Educational-lightgrey?style=for-the-badge)
+![Level](https://img.shields.io/badge/Level-Beginner-orange?style=for-the-badge)
+
 
 ## Overview
 
