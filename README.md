@@ -18,7 +18,6 @@ The **COM 103 Task Tracker** is a Python program designed to help manage and tra
 ### Features:
 - **Task Management**: Lists predefined tasks and their associated hours.
 - **Progress Tracking**: Automatically calculates progress based on task completion and displays overall project status.
-- **Badges**: Recognize and reward progress with customizable badges.
 
 ---
 
